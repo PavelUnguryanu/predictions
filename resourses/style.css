@@ -1,0 +1,107 @@
+/* Основные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url(images/1710800703_furman-top-p-gadalka-zastavka-35.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+    padding: 20px;
+}
+
+/* Стили для заголовка */
+header {
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Стили для контейнера */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.container h4 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Стили для предсказания */
+#prediction {
+    font-size: 1.5em;
+    color: #ff6347;
+    margin-top: 20px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border: 2px solid #ff6347;
+    border-radius: 10px;
+    min-height: 100px;
+    /* Минимальная высота поля */
+    max-width: 400px;
+    /* Максимальная ширина поля */
+    margin: 0 auto;
+    /* Выравнивание по центру */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Стили для кнопки */
+button {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 50px;
+}
+
+button:hover {
+    background-color: #ff4757;
+}
+
+button:active {
+    background-color: #e74c3c;
+    transform: scale(0.98);
+}
+
+/* Медиазапрос для адаптации на мобильных устройствах */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}

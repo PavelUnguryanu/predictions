@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Generator</title>
+    <link rel="stylesheet" href="resourses/style.css">
+</head>
+<body>
+    <header>
+        <h1>Гадания на день</h1>
+    </header>
+    <div class="container">
+        <h4>
+            Нажмите на кнопку чтобы получить предсказание на день
+        </h4>
+        <p id="prediction"></p>
+        <button id="generate">
+            Получить предсказание
+        </button>
+    </div>
+    <script>
+        // Массив предсказаний
+        const predictions = [
+            "Сегодня твой день!",
+            "Тебя ждёт неожиданный сюрприз.",
+            "Сегодня тебе повезёт в любви.",
+            "Пришло время для новых начинаний.",
+            "Ожидай финансовую удачу.",
+            "Будь внимателен к мелочам.",
+            "Сегодня лучше отдохнуть.",
+            "У тебя появится новый друг.",
+            "Тебя ждёт успех в работе.",
+            "Сегодняшний день принесёт радость."
+        ];
+
+        // Функция генерации случайного предсказания
+        function getRandomPrediction() {
+            const randomIndex = Math.floor(Math.random() * predictions.length);
+            return predictions[randomIndex];
+        }
+
+        // Добавляем обработчик события на кнопку
+        document.getElementById('generate').addEventListener('click', function () {
+            // Получаем случайное предсказание
+            const prediction = getRandomPrediction();
+            // Записываем предсказание в элемент <p id="prediction">
+            document.getElementById('prediction').innerText = prediction;
+        });
+    </script>
+</body>
+</html>
